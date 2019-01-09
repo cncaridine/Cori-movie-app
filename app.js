@@ -1,34 +1,28 @@
 // console.log('oh hai')
 // console.log($)
+
+// ============== movie search ======================
 let processData = (data, userInput) => {
   // console.log(data);
   for (let i = 0; i < data.length; i++) {
     // console.log('i work');
-    // mouseover li
-    // const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
-    //   $(event.currentTarget).addClass('mouseover')
-    // })
-    // add modal to mouseover li functionality
+
+    // =========== mouseover li =====================
     const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
       $(event.currentTarget).addClass('mouseover')
     })
-    $li.append('form')
+    // $li.append('form')
     $('ul').append($li)
   }
 }
+// =============user will enter the name of a title=================
 
 $(() => {
   $('form').on('submit', (event) => {
     event.preventDefault()
 
-    // $('#btn').on('click', (event) => {
-    //   // console.log('button was clicked!!')
-    //   $(event.currentTarget).clear()
-    // })
-
     const userInput = $('input[type="text"]').val()
 
-    // =============user will enter the name of a title=================
     $.ajax({
       url: 'http://www.omdbapi.com/?apikey=53aa2cd6&s=' + userInput
     }).then(

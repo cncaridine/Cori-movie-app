@@ -1,9 +1,9 @@
 body {
-  background-color: pink;
+  background-color: gray;
 }
 
 .mouseover {
-  border: 1px solid #ccc;
+  border: 1px solid pink;
   cursor: pointer;
   padding-top: 12px;
   padding-bottom: 12px;
