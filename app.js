@@ -21,17 +21,12 @@ $(() => {
   $('form').on('submit', (event) => {
     event.preventDefault()
 
-    const userInput = $('input[type="text"]').val()
-    // ===========  ?????get functioning clear button????????===================
-    // const $clearButton = $('<button>')
-    //    $compButton.text('clear')
-    //    $compButton.appendTo('form')
-    //
-    //    $compButton.on('click', (event) => {
-    //      $(event.currentTarget)
-    //    })
+    // $('#btn').on('click', () => {
+    //   // console.log('button was clicked!!')
+    //   $(event.currentTarget).reset()
+    // })
 
-    // ======== make titles clickable ==================
+    const userInput = $('input[type="text"]').val()
 
     // =============user will enter the name of a title=================
     $.ajax({
@@ -39,9 +34,8 @@ $(() => {
     }).then(
       (data) => {
         processData(data.Search, userInput)
-
-        // ========info to show in a modal ================
       },
+
       () => {
         console.log('bad request')
       }
