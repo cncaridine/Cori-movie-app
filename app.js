@@ -21,9 +21,9 @@ $(() => {
   $('form').on('submit', (event) => {
     event.preventDefault()
 
-    // $('#btn').on('click', () => {
+    // $('#btn').on('click', (event) => {
     //   // console.log('button was clicked!!')
-    //   $(event.currentTarget).reset()
+    //   $(event.currentTarget).clear()
     // })
 
     const userInput = $('input[type="text"]').val()
