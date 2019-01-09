@@ -4,6 +4,11 @@ let processData = (data, userInput) => {
   // console.log(data);
   for (let i = 0; i < data.length; i++) {
     // console.log('i work');
+    // mouseover li
+    // const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
+    //   $(event.currentTarget).addClass('mouseover')
+    // })
+    // add modal to mouseover li functionality
     const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
       $(event.currentTarget).addClass('mouseover')
     })
