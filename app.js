@@ -1,10 +1,12 @@
 // console.log('oh hai')
 // console.log($)
 let processData = (data, userInput) => {
-  console.log(data);
+  // console.log(data);
   for (let i = 0; i < data.length; i++) {
-    console.log('i work');
-    const $li = $('<li>').text(data[i].Title)
+    // console.log('i work');
+    const $li = $('<li>').text(data[i].Title).on('click', (event) => {
+      $(event.currentTarget).addClass('clickable')
+    })
     $li.append('form')
     $('ul').append($li)
   }
@@ -15,6 +17,16 @@ $(() => {
     event.preventDefault()
 
     const userInput = $('input[type="text"]').val()
+    // ===========  ?????get functioning clear button????????===================
+    // const $clearButton = $('<button>')
+    //    $compButton.text('clear')
+    //    $compButton.appendTo('form')
+    //
+    //    $compButton.on('click', (event) => {
+    //      $(event.currentTarget)
+    //    })
+
+    // ======== make titles clickable ==================
 
     // =============user will enter the name of a title=================
     $.ajax({
@@ -22,17 +34,6 @@ $(() => {
     }).then(
       (data) => {
         processData(data.Search, userInput)
-        // =====log the data ======
-        // console.log(data)
-        // =====calls the specific data======
-        // console.log(data.Search)
-        // =====calls first in the array=====
-        // console.log(data.Search[0])
-        // ========generate data===========================
-
-        // ========generate a list from entire array =======
-
-        // ======== make titles clickable ==================
 
         // ========info to show in a modal ================
       },
