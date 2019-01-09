@@ -4,8 +4,8 @@ let processData = (data, userInput) => {
   // console.log(data);
   for (let i = 0; i < data.length; i++) {
     // console.log('i work');
-    const $li = $('<li>').text(data[i].Title).on('click', (event) => {
-      $(event.currentTarget).addClass('clickable')
+    const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
+      $(event.currentTarget).addClass('mouseover')
     })
     $li.append('form')
     $('ul').append($li)
