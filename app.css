@@ -37,10 +37,10 @@ body {
   background-color: gray;
 }
 
-.mouseover {
+/* .mouseover {
   border: 2px dotted pink;
   cursor: pointer;
-}
+} */
 
 #modal {
 	background-color: rgba(0,0,0,0.4);

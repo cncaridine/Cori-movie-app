@@ -6,38 +6,44 @@
 let processData = (data, userInput) => {
   // console.log(data);
   for (let i = 0; i < data.length; i++) {
-    // console.log('i work');
+  // console.log('i work');
 
     // ===========  mouseover li =====================
     // ===============================================
     const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
-      $(event.currenttarget).addClass('mouseover')
+      $(event.currentTarget).addClass('movieClick')
       // ========= modal event handler ===============
       // =============================================
       $('#modal').removeClass('hidden')
-      // ========== modal content A ===================
-      // ==============================================
-      // $('#modal').removeClass('hidden').addClass('modal-textbox').text('modal works')
-      //
-      // $('#modal').append('#modal-textbox')
-      // ========== modal content B =================
-      // ============================================
-      $('#modal-textbox').on('mouseover', (event) => {
-        $(event.currentTarget).text(data[i].Year)
-      })
-      // ========== modal content C =================
-      // ============================================
-      // $('#modal-textbox').text('modal works')
-
     })
-
-    $('ul').append($li)
+    // ========== modal content poster url =================
+    // ============================================
+    $('#modal-textbox').on('click', (event) => {
+      let moviePlot = (dataPlot, userSelection) => {
+        for (let i = 0; i < dataPlot.length; i++) {
+      $.ajax({
+        url: 'http://www.omdbapi.com/?apikey=53aa2cd6&t=plot='
+      }).then(
+      (dataPlot) => {
+        moviePlot(dataPlot.Title)
+      })
+      }
+    }
+$('ul').append($li)
     // ========== mouseout ===================
     $('#modal').on('click', (event) => {
       $(event.currentTarget).addClass('hidden')
     })
-  }
+  })
 }
+// ======== modal content general==============
+// ============================================
+// $('#modal-textbox').text('modal works')
+
+// ======== modal content from original ajax ==============
+// ============================================
+// $('#modal-textbox').on('mouseover', (event) => {
+//   $(event.currentTarget).text(data[i].Year)
 
 $(() => {
   // ======================= user input =================
