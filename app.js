@@ -10,13 +10,21 @@ let processData = (data, userInput) => {
     // =========== genereic mouseover li =====================
     const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
       $(event.currentTarget).addClass('mouseover')
-      $('#modal').removeClass('hidden')
+      $('#modal').removeClass('hidden').text(data[i].Plot)
     })
 
       $('ul').append($li)
   }
 }
-
+// ========== modal content =================
+const $modalContent = $('<div>').addClass('modal-textbox').text('it works')
+console.log($modalContent);
+$('#modal').append($modalContent)
+// ========= close button ============
+const $closeButton = $('<span>').text('close')
+console.log($closeButton);
+$('.modal-textbox').append($closeButton)
+// ===== ready function =============
 $(() => {
   // ======================= user input =================
   $('form').on('submit', (event) => {
