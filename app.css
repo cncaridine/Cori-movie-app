@@ -3,9 +3,8 @@ body {
 }
 
 .mouseover {
-  border: 1px solid pink;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  color: pink;
+  cursor: pointer;
 }
 
 #modal {
