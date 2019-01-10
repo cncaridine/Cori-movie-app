@@ -2,21 +2,31 @@
 // console.log($)
 
 // ============== movie search ======================
+// ==================================================
 let processData = (data, userInput) => {
   // console.log(data);
   for (let i = 0; i < data.length; i++) {
     // console.log('i work');
 
     // ===========  mouseover li =====================
+    // ===============================================
     const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
       $(event.currenttarget).addClass('mouseover')
-      // ========= modal event handler ====================
+      // ========= modal event handler ===============
+      // =============================================
       $('#modal').removeClass('hidden')
-            // ========== modal content A =================
+      // ========== modal content A ===================
+      // ==============================================
       // $('#modal').removeClass('hidden').addClass('modal-textbox').text('modal works')
       //
       // $('#modal').append('#modal-textbox')
       // ========== modal content B =================
+      // ============================================
+      $('#modal-textbox').on('mouseover', (event) => {
+
+      })
+      // ========== modal content C =================
+      // ============================================
       $('#modal-textbox').text('modal works')
 
     })
