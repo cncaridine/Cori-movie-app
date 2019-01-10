@@ -11,31 +11,21 @@ let processData = (data, userInput) => {
     const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
       $(event.currenttarget).addClass('mouseover')
       $('#modal').removeClass('hidden')
-        // .text(data[i].Plot)
     })
 
     $('ul').append($li)
-// ========== mouseout ===================
+    // ========== mouseout ===================
     $('#modal').on('click', (event) => {
       $(event.currentTarget).addClass('hidden')
     })
+    // ========== modal content =================
+    $('#modal-textbox').text('the modal works')
   }
 }
 // ========== modal content =================
 // const $modalContent = $('<div>').addClass('modal-textbox').text('it works')
 // console.log($modalContent)
 // $('#modal').append($modalContent)
-// ========= close button A ============
-// const $closeButton = $('<button>').text('close')
-// console.log($closeButton)
-// $('.modal-textbox').append($closeButton)
-// ========= close button  ============
-// const $modal = $('#modal');
-// const $closeBtn = $('.closeButton')
-// const closeModal = () => {
-//   $modal.css('display', 'none')
-// }
-// $closeBtn.on('click', closeModal)
 // ===== ready function =============
 $(() => {
   // ======================= user input =================
