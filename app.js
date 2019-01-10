@@ -7,10 +7,18 @@ let processData = (data, userInput) => {
   for (let i = 0; i < data.length; i++) {
     // console.log('i work');
 
-    // =========== genereic mouseover li =====================
+    // ===========  mouseover li =====================
     const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
       $(event.currenttarget).addClass('mouseover')
+      // ========= modal event handler ====================
       $('#modal').removeClass('hidden')
+            // ========== modal content A =================
+      // $('#modal').removeClass('hidden').addClass('modal-textbox').text('modal works')
+      //
+      // $('#modal').append('#modal-textbox')
+      // ========== modal content B =================
+      $('#modal-textbox').text('modal works')
+
     })
 
     $('ul').append($li)
@@ -18,15 +26,9 @@ let processData = (data, userInput) => {
     $('#modal').on('click', (event) => {
       $(event.currentTarget).addClass('hidden')
     })
-    // ========== modal content =================
-    $('#modal-textbox').text('the modal works')
   }
 }
-// ========== modal content =================
-// const $modalContent = $('<div>').addClass('modal-textbox').text('it works')
-// console.log($modalContent)
-// $('#modal').append($modalContent)
-// ===== ready function =============
+
 $(() => {
   // ======================= user input =================
   $('form').on('submit', (event) => {

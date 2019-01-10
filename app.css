@@ -1,3 +1,35 @@
+/* ============= mobile design ==================== */
+
+ body {
+   background: thistle;
+ }
+
+ .hidden {
+   display: none;
+ }
+
+ #modal {
+   background-color: rgba(0,0,0,0.5);
+ 	 position: fixed;
+   align-content: center;
+ 	 height: 80%;
+ 	 width: 80%;
+ 	 z-index: 1;
+ 	 overflow: auto;
+   cursor: pointer;
+ }
+
+ #modal-textbox {
+   background-color: white;
+   align-content: center;
+   height: 95%;
+   width: 95%;
+   border-radius: 2px;
+   margin: 75px auto;
+   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+ }
+/* ============= web design ==================== */
+@media (min-width: 600px) {
 body {
   background-color: gray;
 }
@@ -40,4 +72,5 @@ body {
 .closeButton:hover, .closeButton:focus{
   color: black;
   cursor: pointer;
+}
 }
