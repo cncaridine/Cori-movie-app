@@ -7,34 +7,39 @@ let processData = (data, userInput) => {
   for (let i = 0; i < data.length; i++) {
     // console.log('i work');
 
-    // =========== mouseover li =====================
-    const $li = $('<li>').text(data[i].Title)
-    // $li.append('form')
-    $('ul').append($li)
+    // =========== genereic mouseover li =====================
+    const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
+      $(event.currentTarget).addClass('mouseover')
+
+    })
+
+      // ======== generic mouseover and mouseout =================
+      // const $li = $('<li>').text(data[i].Title)
+      //   .on('mouseover', (event) => {
+      //   $(event.currentTarget).addClass('mouseover')
+      //   .on('mouseout', (event) => {
+      //     $(event.currentTarget).removeClass('mouseover')
+
+      // ============= generic li ======================
+      // const $li = $('<li>').text(data[i].Title)
+      // $li.append('form')
+      $('ul').append($li)
   }
 }
 
 $(() => {
   // ============== Grabbing Elements =================
   // Grabbing Elements
-  const $mouseOverOpen = $('#openModal')
-  const $modal = $('#modal')
-  const $mouseOverClose = $('#close')
-
+  // const $mouseOverOpen = $('#openModal')
+  // const $modal = $('.modal')
 
   // // ================ Event Handlers ====================
-  const openModal = () => {
-    $modal.show().text('works')
-  }
-
-  const closeModal = () => {
-    $modal.hide()
-  }
+  // const openModal = (event) => {
+  //   $modal.show().text('works')
+  // }
 
   // ====================Event Listeners==============
-  $mouseOverOpen.on('mouseover', openModal)
-
-  $mouseOverClose.on('mouseout', closeModal)
+  // $modal.on('mouseover', openModal)
 
   // ======================= user input =================
 
