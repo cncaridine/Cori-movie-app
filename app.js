@@ -10,7 +10,7 @@ let processData = (data, userInput) => {
     // =========== genereic mouseover li =====================
     const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
       $(event.currentTarget).addClass('mouseover')
-
+      $('#modal').removeClass('hidden')
     })
 
       // ======== generic mouseover and mouseout =================
