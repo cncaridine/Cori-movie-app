@@ -13,36 +13,12 @@ let processData = (data, userInput) => {
       $('#modal').removeClass('hidden')
     })
 
-      // ======== generic mouseover and mouseout =================
-      // const $li = $('<li>').text(data[i].Title)
-      //   .on('mouseover', (event) => {
-      //   $(event.currentTarget).addClass('mouseover')
-      //   .on('mouseout', (event) => {
-      //     $(event.currentTarget).removeClass('mouseover')
-
-      // ============= generic li ======================
-      // const $li = $('<li>').text(data[i].Title)
-      // $li.append('form')
       $('ul').append($li)
   }
 }
 
 $(() => {
-  // ============== Grabbing Elements =================
-  // Grabbing Elements
-  // const $mouseOverOpen = $('#openModal')
-  // const $modal = $('.modal')
-
-  // // ================ Event Handlers ====================
-  // const openModal = (event) => {
-  //   $modal.show().text('works')
-  // }
-
-  // ====================Event Listeners==============
-  // $modal.on('mouseover', openModal)
-
   // ======================= user input =================
-
   $('form').on('submit', (event) => {
     const userInput = $('input[type="text"]').val()
     event.preventDefault()

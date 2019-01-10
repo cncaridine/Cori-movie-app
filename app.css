@@ -4,7 +4,6 @@ body {
 
 .mouseover {
   border: 1px solid pink;
-  cursor: pointer;
   padding-top: 12px;
   padding-bottom: 12px;
 }
@@ -18,7 +17,7 @@ body {
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
-  /* display: none; */
+  cursor: pointer;
 }
 
 .hidden {
@@ -32,4 +31,14 @@ body {
 	border-radius: 2px;
 	margin: 150px auto;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+ .closeButton {
+   color: red;
+   float: right;
+   font-size: 40px;
+ }
+
+.closeButton:hover, .closeButton:focus{
+  color: black;
+  cursor: pointer;
 }
