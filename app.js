@@ -23,11 +23,11 @@ let processData = (data, userInput) => {
       // ========== modal content B =================
       // ============================================
       $('#modal-textbox').on('mouseover', (event) => {
-
+        $(event.currentTarget).text(data[i].Year)
       })
       // ========== modal content C =================
       // ============================================
-      $('#modal-textbox').text('modal works')
+      // $('#modal-textbox').text('modal works')
 
     })
 
