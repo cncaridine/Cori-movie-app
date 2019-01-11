@@ -15,26 +15,31 @@ let processData = (data, userInput) => {
       // ========= modal event handler ===============
       // =============================================
       $('#modal').removeClass('hidden')
+// ============ modal with year =========================
+      $('#modal-textbox').on('mouseover', (event) => {
+      $(event.currentTarget).text(data[i].Year)
     })
-    // ========== modal content poster url =================
+    // ========== modal content plot url =================
     // ============================================
-    $('#modal-textbox').on('click', (event) => {
-      let moviePlot = (dataPlot, userSelection) => {
-        for (let i = 0; i < dataPlot.length; i++) {
-      $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=53aa2cd6&t=plot='
-      }).then(
-      (dataPlot) => {
-        moviePlot(dataPlot.Title)
-      })
-      }
-    }
+    // $('#modal-textbox').on('mouseover', (event) => {
+    //   $.ajax({
+    //     url: 'http://www.omdbapi.com/?apikey=53aa2cd6&t=plot' + userInput
+    //   }).then(
+    //     (data) => {
+    //       console.log(data.Plot)
+    //     },
+    //
+    //     () => {
+    //       console.log('bad request')
+    //     }
+    //   )
 $('ul').append($li)
     // ========== mouseout ===================
     $('#modal').on('click', (event) => {
       $(event.currentTarget).addClass('hidden')
     })
-  })
+  // })
+})
 }
 // ======== modal content general==============
 // ============================================
@@ -42,9 +47,6 @@ $('ul').append($li)
 
 // ======== modal content from original ajax ==============
 // ============================================
-// $('#modal-textbox').on('mouseover', (event) => {
-//   $(event.currentTarget).text(data[i].Year)
-
 $(() => {
   // ======================= user input =================
   $('form').on('submit', (event) => {
