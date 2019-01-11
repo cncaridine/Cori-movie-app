@@ -56,6 +56,14 @@ li {
   font-family: 'Itim', cursive;
   font-size: 5vw;
   list-style: none;
+  animation-name: rotate-diagonal-br;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.rotate-diagonal-br {
+	-webkit-animation: rotate-diagonal-br 0.4s linear both;
+	        animation: rotate-diagonal-br 0.4s linear both;
 }
 
 #modal-textbox {
@@ -219,5 +227,51 @@ p {
     -webkit-filter: blur(0px);
             filter: blur(0px);
     opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation rotate-diagonal-br
+ * ----------------------------------------
+ */
+@-webkit-keyframes rotate-diagonal-br {
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+            transform: rotate3d(-1, 1, 0, 0deg);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+  50% {
+    -webkit-transform: rotate3d(-1, 1, 0, -180deg);
+            transform: rotate3d(-1, 1, 0, -180deg);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 1, 0, -360deg);
+            transform: rotate3d(-1, 1, 0, -360deg);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+}
+@keyframes rotate-diagonal-br {
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+            transform: rotate3d(-1, 1, 0, 0deg);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+  50% {
+    -webkit-transform: rotate3d(-1, 1, 0, -180deg);
+            transform: rotate3d(-1, 1, 0, -180deg);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 1, 0, -360deg);
+            transform: rotate3d(-1, 1, 0, -360deg);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
   }
 }
