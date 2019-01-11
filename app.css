@@ -35,12 +35,10 @@
 @media (min-width: 600px) {
 body {
   background-color: gray;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt3TV5w0eVRl8M6TeuPgr3hZwpU8moUnnmKyfA-AXedEjK2U9GLw");
+  background-position: right;
+  background-repeat: repeat-y;
 }
-
-/* .mouseover {
-  border: 2px dotted pink;
-  cursor: pointer;
-} */
 
 #modal {
 	background-color: rgba(0,0,0,0.4);

@@ -10,8 +10,8 @@ let processData = (data, userInput) => {
 
     // ===========  mouseover li =====================
     // ===============================================
-    const $li = $('<li>').text(data[i].Title).on('mouseover', (event) => {
-      $(event.currentTarget).addClass('movieClick')
+    const $li = $('<li>').text(data[i].Title).on('click', (event) => {
+      $(event.currentTarget).addClass('movieClick').css('color', 'red')
       // ========= modal event handler ===============
       // =============================================
       $('#modal').removeClass('hidden')
