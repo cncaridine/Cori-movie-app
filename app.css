@@ -17,6 +17,10 @@
   background-color: pink;
 }
 
+.form {
+  text-align: center;
+}
+
 .sectionA {
   background: yellow;
   display: inline-block;
