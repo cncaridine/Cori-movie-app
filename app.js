@@ -38,7 +38,7 @@ $(() => {
     $(event.currentTarget).trigger('reset')
 
     $.ajax({
-      url: 'http://www.omdbapi.com/?apikey=53aa2cd6&s=' + userInput
+      url: 'https://www.omdbapi.com/?apikey=53aa2cd6&s=' + userInput
     }).then(
       (data) => {
         processData(data.Search, userInput)
