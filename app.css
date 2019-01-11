@@ -9,41 +9,45 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: stretch;
 }
+
+
+ img {
+   border: 10px dashed gray;
+ }
 
 h1 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3vw;
+  font-size: 4vw;
 }
 
 p {
   font-family: 'Coming Soon', cursive;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 li {
   font-family: 'Itim', cursive;
-  font-size: 2vw;
+  font-size: 5vw;
   list-style: none;
 }
 
 #modal-textbox {
   font-family: 'Quantico', sans-serif;
+  font-size: 12vw;
 }
 
  .hidden {
    display: none;
  }
 
- img {
-   border: 10px dashed gray;
- }
-
  #modal {
    background-color: rgba(0,0,0,0.5);
  	 position: fixed;
    align-content: center;
- 	 height: 80%;
+ 	 height: 40%;
  	 width: 80%;
  	 z-index: 1;
  	 overflow: auto;
@@ -53,8 +57,8 @@ li {
  #modal-textbox {
    background-color: white;
    align-content: center;
-   height: 95%;
-   width: 95%;
+   height: 30%;
+   width: 50%;
    border-radius: 2px;
    margin: 75px auto;
    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -69,18 +73,40 @@ body {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt3TV5w0eVRl8M6TeuPgr3hZwpU8moUnnmKyfA-AXedEjK2U9GLw");
   background-position: right;
   background-repeat: repeat-y;
+
 }
 
 img {
   border-color: #050908;
 }
 
+.sectionA {
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  font-family: 'Coming Soon', cursive;
+  font-size: 2vw;
+}
+
+/* .sidebar {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  height: 40%;
+  margin: 0 auto;
+  font: .25vw;
+} */
+
 #modal {
 	background-color: rgba(0,0,0,0.4);
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 100%;
+	height: 80%;
 	width: 100%;
 	z-index: 1;
 	overflow: auto;
@@ -93,13 +119,13 @@ img {
 
 #modal-textbox {
 	background-color: white;
-	height: 350px;
-	width: 550px;
+	height: 40%;
+	width: 50%;
 	border-radius: 2px;
 	margin: 150px auto;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
- .closeButton {
+ /* .closeButton {
    color: red;
    float: right;
    font-size: 40px;
@@ -108,5 +134,5 @@ img {
 .closeButton:hover, .closeButton:focus{
   color: black;
   cursor: pointer;
-}
+} */
 }
