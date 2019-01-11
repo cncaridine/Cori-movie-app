@@ -15,40 +15,28 @@ let processData = (data, userInput) => {
       // ========= modal event handler ===============
       // =============================================
       $('#modal').removeClass('hidden')
-// ============ modal with year =========================
+      // ============ modal with year =========================
       $('#modal-textbox').on('mouseover', (event) => {
-      $(event.currentTarget).text(data[i].Year)
+        $(event.currentTarget).text(data[i].Year)
+      })
     })
-    // ========== modal content plot url =================
-    // ============================================
-    // $('#modal-textbox').on('mouseover', (event) => {
-    //   $.ajax({
-    //     url: 'http://www.omdbapi.com/?apikey=53aa2cd6&t=plot' + userInput
-    //   }).then(
-    //     (data) => {
-    //       console.log(data.Plot)
-    //     },
-    //
-    //     () => {
-    //       console.log('bad request')
-    //     }
-    //   )
+
 $('ul').append($li)
     // ========== mouseout ===================
     $('#modal').on('click', (event) => {
       $(event.currentTarget).addClass('hidden')
     })
-  // })
-})
+  }
 }
 // ======== modal content general==============
 // ============================================
 // $('#modal-textbox').text('modal works')
 
 // ======== modal content from original ajax ==============
-// ============================================
+// ========================================================
 $(() => {
   // ======================= user input =================
+  // ====================================================
   $('form').on('submit', (event) => {
     const userInput = $('input[type="text"]').val()
     event.preventDefault()
