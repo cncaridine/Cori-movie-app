@@ -12,7 +12,8 @@
   justify-content: center;
   flex-wrap: wrap;
   /* align-content: stretch; */
-  width: 80%;
+  width: 98%;
+  height: 98%;
   background-color: pink;
 }
 
@@ -30,6 +31,7 @@
   width: 80%;
   height: 90%;
   flex-wrap: wrap;
+  text-align: center;
 }
 
  img {
@@ -110,6 +112,7 @@ body {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt3TV5w0eVRl8M6TeuPgr3hZwpU8moUnnmKyfA-AXedEjK2U9GLw");
   background-position: right;
   background-repeat: repeat-y;
+  background-size: 20% 20%;
 }
 
 .container {
@@ -119,7 +122,8 @@ body {
   align-items: center;
   flex-wrap: wrap;
   align-content: stretch;
-  width: 90%;
+  width: 80%;
+  height: 80%;
 }
 
 img {
