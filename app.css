@@ -13,15 +13,18 @@
 
 h1 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 5vw;
+  font-size: 3vw;
 }
 
 p {
   font-family: 'Coming Soon', cursive;
+  font-size: 2vw;
 }
 
 li {
   font-family: 'Itim', cursive;
+  font-size: 2vw;
+  list-style: none;
 }
 
 #modal-textbox {
