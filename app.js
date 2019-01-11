@@ -1,5 +1,3 @@
-// console.log('oh hai')
-// console.log($)
 
 // ============== movie search ======================
 // ==================================================
@@ -15,7 +13,7 @@ let processData = (data, userInput) => {
       // ========= modal event handler ===============
       // =============================================
       $('#modal').removeClass('hidden')
-      // ============ modal with year =========================
+      // ============ modal with year ================ ================================================
       $('#modal-textbox').on('mouseover', (event) => {
         $(event.currentTarget).text(data[i].Year)
       })
@@ -28,9 +26,6 @@ $('ul').append($li)
     })
   }
 }
-// ======== modal content general==============
-// ============================================
-// $('#modal-textbox').text('modal works')
 
 // ======== modal content from original ajax ==============
 // ========================================================
