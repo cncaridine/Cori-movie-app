@@ -26,9 +26,8 @@ $('ul').append($li)
     })
     // ======= reset li =================
     // ==================================
-    // $('button').appendTo('ul').delete('form')
-    $('li').on('click', (event) => {
-      $(event.currentTarget).trigger('reset')
+      $('button').on('click', (event) => {
+      $(event.currentTarget).remove('li')
     })
   }
 }
