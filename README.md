@@ -1,2 +1,7 @@
-# movie-app
-Create a movie search site 
+
+Title:
+Creator:
+Site:
+Technologies Used:
+Approach:
+Unsolved Problems:
