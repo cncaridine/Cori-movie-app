@@ -14,7 +14,7 @@
   /* align-content: stretch; */
   width: 98%;
   height: 98%;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .form {
@@ -22,7 +22,7 @@
 }
 
 .sectionA {
-  background: yellow;
+  /* background: yellow; */
   display: inline-block;
   width: auto;
   hegiht: auto;

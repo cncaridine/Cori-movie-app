@@ -24,9 +24,14 @@ $('ul').append($li)
     $('#modal').on('click', (event) => {
       $(event.currentTarget).addClass('hidden')
     })
+    // ======= reset li =================
+    // ==================================
+    // $('button').appendTo('ul').delete('form')
+    $('li').on('click', (event) => {
+      $(event.currentTarget).trigger('reset')
+    })
   }
 }
-
 // ======== modal content from original ajax ==============
 // ========================================================
 $(() => {
