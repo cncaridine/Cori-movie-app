@@ -26,7 +26,7 @@ $('ul').append($li)
     })
     // ======= reset li =================
     // ==================================
-      $('#clearList').on('click', (event) => {
+$('#clearList').on('click', (event) => {
       $('#resultList').remove('li')
       console.log($('#resultList'));
     })
