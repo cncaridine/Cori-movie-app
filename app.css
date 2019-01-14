@@ -118,7 +118,7 @@ li {
 
 /* ============= web design ==================== */
 /* ============================================= */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 body {
   background-color: #447B96;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt3TV5w0eVRl8M6TeuPgr3hZwpU8moUnnmKyfA-AXedEjK2U9GLw");

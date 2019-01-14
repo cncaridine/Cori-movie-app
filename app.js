@@ -26,8 +26,9 @@ $('ul').append($li)
     })
     // ======= reset li =================
     // ==================================
-      $('button').on('click', (event) => {
-      $(event.currentTarget).remove('li')
+      $('#clearList').on('click', (event) => {
+      $('#resultList').remove('li')
+      console.log($('#resultList'));
     })
   }
 }
